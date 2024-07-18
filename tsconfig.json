@@ -1,14 +1,15 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "lib": ["ESNext"],
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
+    "target": "ES2021",
+    "lib": ["esnext", "DOM"],
+    "module": "commonjs",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "strict": true,
     "strictNullChecks": true,
+    "declaration": true,
+    "outDir": "../../packages/chatgpt-cjs/dist",
     "esModuleInterop": true,
-    "skipDefaultLibCheck": true,
     "skipLibCheck": true
   }
 }

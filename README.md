@@ -6,10 +6,7 @@
 [![JSDocs][jsdocs-src]][jsdocs-href]
 [![License][license-src]][license-href]
 
-nanoid v4,  but support cjs
-
-> **Note**:
-> Replace `nanoid-cjs`, `nanoid v4,  but suport cjs` and `leizhenpeng` globally to use this template.
+> latest nanoid, but support cjs for nodejs
 
 ## License
 
