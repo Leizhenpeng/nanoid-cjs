@@ -6,7 +6,7 @@
 [![JSDocs][jsdocs-src]][jsdocs-href]
 [![License][license-src]][license-href]
 
-# Latest nanoid, but support CJS for Node.js
+> Latest nanoid, but support CJS for Node.js
 
 Nanoid made breaking changes in version 4 and [no longer supports CJS imports](https://github.com/ai/nanoid/issues/365).
 
@@ -14,9 +14,15 @@ This is a disaster for developers using older versions of Node.js, especially th
 
 Here, we use the Vercel NCC compiler to compile it, perfectly supporting CJS syntax.
 
+
 ```javascript
 import { nanoid } from 'nanoid-cjs'
 model.id = nanoid() //=> "V1StGXR8_Z5jdHi6B-myT"
+```
+
+```javascript
+const { nanoid } = require('nanoid-cjs');
+nanoid()  //=> "V1StGXR8_Z5jdHi6B-myT"
 ```
 
 ## License
