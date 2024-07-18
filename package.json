@@ -1,7 +1,7 @@
 {
   "name": "nanoid-cjs",
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "packageManager": "pnpm@9.1.1",
   "description": "nanoid v4,  but suport cjs",
   "author": "leizhenpeng <laolei@forkway.cn>",
