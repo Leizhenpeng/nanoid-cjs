@@ -1,9 +1,9 @@
 {
   "name": "nanoid-cjs",
   "type": "module",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "packageManager": "pnpm@9.1.1",
-  "description": "nanoid v4,  but suport cjs",
+  "description": "latest nanoid, but support cjs for nodejs",
   "author": "leizhenpeng <laolei@forkway.cn>",
   "license": "MIT",
   "funding": "https://github.com/sponsors/leizhenpeng",
@@ -13,17 +13,20 @@
     "url": "git+https://github.com/leizhenpeng/nanoid-cjs.git"
   },
   "bugs": "https://github.com/leizhenpeng/nanoid-cjs/issues",
-  "keywords": [],
+  "keywords": [
+    "nanoid",
+    "cjs",
+    "node"
+  ],
   "sideEffects": false,
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
+      "require": "./dist/index.js"
     }
   },
-  "main": "./dist/index.mjs",
-  "module": "./dist/index.mjs",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
   "types": "./dist/index.d.ts",
   "typesVersions": {
     "*": {
@@ -37,7 +40,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "unbuild",
+    "build": "ncc build src/index.ts -o dist",
+    "dts": "tsc --emitDeclarationOnly",
     "dev": "unbuild --stub",
     "lint": "eslint .",
     "prepublishOnly": "nr build",
@@ -47,11 +51,15 @@
     "typecheck": "tsc --noEmit",
     "prepare": "simple-git-hooks"
   },
+  "dependencies": {
+    "nanoid": "^5.0.7"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^2.18.1",
     "@antfu/ni": "^0.21.12",
     "@antfu/utils": "^0.7.8",
     "@types/node": "^20.12.12",
+    "@vercel/ncc": "^0.38.1",
     "bumpp": "^9.4.1",
     "eslint": "^9.3.0",
     "esno": "^4.7.0",
