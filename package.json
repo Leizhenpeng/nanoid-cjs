@@ -34,7 +34,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "nanoid": "^5.0.7"
+    "nanoid": "^5.0.9"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.18.1",
